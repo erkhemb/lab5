@@ -15,7 +15,9 @@ router.get('/', function (req, res, next) {
       console.log("Promise Rejected");
     });
 
-  console.log("222" + data);
+
+
+  console.log("13456" + data.json);
   res.render('users', { data: JSON.stringify(data) });
 });
 
