@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Data</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>User list</h1>
+  <p>Welcome to users</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>UserName</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>Zip code</th>
+        <th>Latitude</th>
+        <th>Longtitude</th>
+        <th>Website</th>
+      </tr>
+    </thead>
+    </thead>
+    <tbody>
+      <% if(datas.length){
+            for(var i = 0;i < datas.length;i++) { %>
+        <tr class="tr">
+
+          <td>
+            <%=datas[i]['id']%>
+          </td>
+          <td>
+            <%=datas[i]['name']%>
+          </td>
+          <td>
+            <%=datas[i]['username']%>
+          </td>
+          <td>
+            <%=datas[i].email%>
+          </td>
+          <td>
+            <%=datas[i].address.city%>
+          </td>
+          <td>
+            <%=datas[i].address.zipcode%>
+          </td>
+          <td>
+            <%=datas[i].address.geo.lat%>
+          </td>
+          <td>
+            <%=datas[i].address.geo.lng%>
+          </td>
+          <td>
+            <%=datas[i].website%>
+          </td>
+        </tr>
+        <% }
+
+        } %>
+</body>
+</table>
+</body>
+
+</html>
